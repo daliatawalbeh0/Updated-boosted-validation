@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div id="Hello"></div>
+    <script>
+      const hello = document.getElementById("Hello");
+      var name = sessionStorage.getItem("Fullname");
+      hello.innerHTML = `Welcome ${name}`;
+    </script>
+  </body>
+</html>

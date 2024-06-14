@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <style>
+    #but {
+      width: 8rem;
+      height: 3rem;
+      background-color: rgb(230, 252, 87);
+      color: rgb(0, 0, 0);
+      border: 1px solid rgb(230, 252, 87);
+      border-radius: 70%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #logout {
+      float: inline-end;
+      width: 8rem;
+      height: 3rem;
+      background-color: rgb(0, 0, 0);
+      color: rgb(242, 242, 242);
+      border: 1px solid rgb(0, 0, 0);
+      cursor: pointer;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+    }
+  </style>
+
+  <body>
+    <div style="text-align: center">
+      <button id="but" onclick="play()">Play/Pause</button>
+      <br />
+      <br />
+      <video id="myvideo" width="900" height="500" controls>
+        <source src="Eid.mp4" type="video/mp4" />
+        <source src="Eid.ogg" type="video/ogg" />
+      </video>
+      <br />
+      <br />
+      <button id="logout" onclick="logout()">Log Out</button>
+    </div>
+    <script>
+      function play() {
+        if (myvideo.paused) myvideo.play();
+        else myvideo.pause();
+      }
+      function logout() {
+        window.location.href = "boostedlogin.html";
+      }
+    </script>
+  </body>
+</html>
